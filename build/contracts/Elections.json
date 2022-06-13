@@ -2,6 +2,27 @@
   "contractName": "Elections",
   "abi": [
     {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "candidateCounts",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
       "constant": true,
       "inputs": [
         {
@@ -18,45 +39,36 @@
           "type": "uint256"
         },
         {
-          "internalType": "uint256",
-          "name": "votecount",
-          "type": "uint256"
-        },
-        {
           "internalType": "string",
           "name": "name",
           "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "votecount",
+          "type": "uint256"
         }
       ],
       "payable": false,
       "stateMutability": "view",
       "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [],
-      "name": "Election",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"Election\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"candidates\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"votecount\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Elections.sol\":\"Elections\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Elections.sol\":{\"keccak256\":\"0x43f570bb1a8fdb88dd94dd55e56c2cc074ce13098a29d256d77bb0da9cace84c\",\"urls\":[\"bzz-raw://788acdf9dcb753d8143a7270ee1874945fc0de164e6817940d59ddaf9333945d\",\"dweb:/ipfs/Qme9MinQH5YEG2JGBzDRAux7STsUnMFYLHTJScRbqxubXv\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506101f3806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80631d6c263c1461003b5780633477ee2e14610045575b600080fd5b6100436100fa565b005b6100716004803603602081101561005b57600080fd5b81019080803590602001909291905050506100fc565b6040518084815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b838110156100bd5780820151818401526020810190506100a2565b50505050905090810190601f1680156100ea5780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b565b6000602052806000526040600020600091509050806000015490806001015490806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101b45780601f10610189576101008083540402835291602001916101b4565b820191906000526020600020905b81548152906001019060200180831161019757829003601f168201915b505050505090508356fea265627a7a72315820ff2a28526ff874c73129bccaa87f969db622b1b5df0a9df7d95d0aa9f7cb3daf64736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80631d6c263c1461003b5780633477ee2e14610045575b600080fd5b6100436100fa565b005b6100716004803603602081101561005b57600080fd5b81019080803590602001909291905050506100fc565b6040518084815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b838110156100bd5780820151818401526020810190506100a2565b50505050905090810190601f1680156100ea5780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b565b6000602052806000526040600020600091509050806000015490806001015490806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101b45780601f10610189576101008083540402835291602001916101b4565b820191906000526020600020905b81548152906001019060200180831161019757829003601f168201915b505050505090508356fea265627a7a72315820ff2a28526ff874c73129bccaa87f969db622b1b5df0a9df7d95d0aa9f7cb3daf64736f6c63430005100032",
-  "sourceMap": "68:199:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:199:0;;;;;;;",
-  "deployedSourceMap": "68:199:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:199:0;;;;;;;;;;;;;;;;;;;;;;;;220:38;;;:::i;:::-;;172:44;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;172:44:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;172:44:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;220:38;:::o;172:44::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.0 <0.9.0;\r\n\r\ncontract Elections\r\n{\r\n\tstruct candidate\r\n\t{\r\n\t\tuint id;\r\n\t\tuint votecount;\r\n\t\tstring  name;\r\n\t}\r\n\t\r\n\r\n\tmapping(uint => candidate) public candidates;\r\n\tfunction Election () public\r\n\t{\r\n\t\r\n\t}\r\n\r\n\r\n\r\n}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"candidateCounts\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"candidates\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"votecount\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Elections.sol\":\"Elections\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Elections.sol\":{\"keccak256\":\"0x7a6e838d852a7cdc795a0225837b7bee7179e27e4ef8850e5af011bb30992bba\",\"urls\":[\"bzz-raw://6e4429b5d1abbcee00329ec98d7ea299902802a686bc99b13ce636f0abbb1670\",\"dweb:/ipfs/QmdewfnTW1n1xiF8ZJdWZc5bxbfEJccfg59TjypodzcE8z\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506100556040518060400160405280600c81526020017f4e4157415a2053686172696600000000000000000000000000000000000000008152506100e260201b60201c565b6100996040518060400160405280600b81526020017f496d72616e204b68616e200000000000000000000000000000000000000000008152506100e260201b60201c565b6100dd6040518060400160405280601081526020017f5a61726461726920546865204b696e67000000000000000000000000000000008152506100e260201b60201c565b610202565b600160008154809291906001019190505550604051806060016040528060015481526020018281526020016000815250600080600154815260200190815260200160002060008201518160000155602082015181600101908051906020019061014c92919061015d565b506040820151816002015590505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061019e57805160ff19168380011785556101cc565b828001600101855582156101cc579182015b828111156101cb5782518255916020019190600101906101b0565b5b5090506101d991906101dd565b5090565b6101ff91905b808211156101fb5760008160009055506001016101e3565b5090565b90565b61020b806102116000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063052c06251461003b5780633477ee2e14610059575b600080fd5b61004361010e565b6040518082815260200191505060405180910390f35b6100856004803603602081101561006f57600080fd5b8101908080359060200190929190505050610114565b6040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b838110156100d15780820151818401526020810190506100b6565b50505050905090810190601f1680156100fe5780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b60015481565b6000602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101c65780601f1061019b576101008083540402835291602001916101c6565b820191906000526020600020905b8154815290600101906020018083116101a957829003601f168201915b505050505090806002015490508356fea265627a7a72315820d56ed2b6d2e58ee9ce2ce57959fc113d43829ee54edad0bdec1213a2a748ec0f64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c8063052c06251461003b5780633477ee2e14610059575b600080fd5b61004361010e565b6040518082815260200191505060405180910390f35b6100856004803603602081101561006f57600080fd5b8101908080359060200190929190505050610114565b6040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b838110156100d15780820151818401526020810190506100b6565b50505050905090810190601f1680156100fe5780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b60015481565b6000602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101c65780601f1061019b576101008083540402835291602001916101c6565b820191906000526020600020905b8154815290600101906020018083116101a957829003601f168201915b505050505090806002015490508356fea265627a7a72315820d56ed2b6d2e58ee9ce2ce57959fc113d43829ee54edad0bdec1213a2a748ec0f64736f6c63430005100032",
+  "sourceMap": "68:541:0:-;;;282:132;8:9:-1;5:2;;;30:1;27;20:12;5:2;282:132:0;312:28;;;;;;;;;;;;;;;;;;:12;;;:28;;:::i;:::-;344:27;;;;;;;;;;;;;;;;;;:12;;;:27;;:::i;:::-;375:32;;;;;;;;;;;;;;;;;;:12;;;:32;;:::i;:::-;68:541;;438:160;498:15;;:17;;;;;;;;;;;;;552:37;;;;;;;;562:15;;552:37;;;;580:5;552:37;;;;586:1;552:37;;;522:10;:27;533:15;;522:27;;;;;;;;;;;:67;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;438:160;:::o;68:541::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "68:541:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:541:0;;;;;;;;;;;;;;;;;;;;;;;;246:27;;;:::i;:::-;;;;;;;;;;;;;;;;;;;196:44;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;196:44:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;196:44:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;246:27;;;;:::o;196:44::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.0 <0.9.0;\r\n\r\ncontract Elections\r\n{\r\n\tstruct candidate\r\n\t{\r\n\t\tuint id;\r\n\t\t\r\n\t\tstring name;\r\n\t\tuint votecount;\r\n\t}\r\n\t\r\n\t////Fetch Candidates\r\n\tmapping(uint => candidate) public candidates;\r\n\r\n\tuint public candidateCounts;\r\n\r\n\t\r\n\tconstructor() public \r\n\t{\r\n\r\n\taddCandidate(\"NAWAZ Sharif\");\r\n\taddCandidate(\"Imran Khan \");\r\n\taddCandidate(\"Zardari The King\");\r\n\r\n\t}\r\n\r\n\r\n    \r\n\t\r\n\r\n\t\r\n\t\r\n\tfunction addCandidate (string memory _name) private \r\n\t{\r\n\t\tcandidateCounts++;\r\n\r\n\t\tcandidates[candidateCounts] = candidate(candidateCounts,  _name,0 );\r\n\r\n\r\n\t}\r\n\r\n\r\n\r\n\r\n}",
   "sourcePath": "C:\\Users\\long play computers\\Desktop\\BlockElection\\ps\\contracts\\Elections.sol",
   "ast": {
     "absolutePath": "project:/contracts/Elections.sol",
     "exportedSymbols": {
       "Elections": [
-        17
+        50
       ]
     },
-    "id": 18,
+    "id": 51,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -79,9 +91,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 17,
+        "id": 50,
         "linearizedBaseContracts": [
-          17
+          50
         ],
         "name": "Elections",
         "nodeType": "ContractDefinition",
@@ -119,24 +131,24 @@
               {
                 "constant": false,
                 "id": 5,
-                "name": "votecount",
+                "name": "name",
                 "nodeType": "VariableDeclaration",
                 "scope": 8,
-                "src": "128:14:0",
+                "src": "132:11:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
                 },
                 "typeName": {
                   "id": 4,
-                  "name": "uint",
+                  "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "128:4:0",
+                  "src": "132:6:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
                   }
                 },
                 "value": null,
@@ -145,24 +157,24 @@
               {
                 "constant": false,
                 "id": 7,
-                "name": "name",
+                "name": "votecount",
                 "nodeType": "VariableDeclaration",
                 "scope": 8,
-                "src": "147:12:0",
+                "src": "148:14:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_string_storage_ptr",
-                  "typeString": "string"
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
                 },
                 "typeName": {
                   "id": 6,
-                  "name": "string",
+                  "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "147:6:0",
+                  "src": "148:4:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_string_storage_ptr",
-                    "typeString": "string"
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
                   }
                 },
                 "value": null,
@@ -171,8 +183,8 @@
             ],
             "name": "candidate",
             "nodeType": "StructDefinition",
-            "scope": 17,
-            "src": "92:72:0",
+            "scope": 50,
+            "src": "92:75:0",
             "visibility": "public"
           },
           {
@@ -180,8 +192,8 @@
             "id": 12,
             "name": "candidates",
             "nodeType": "VariableDeclaration",
-            "scope": 17,
-            "src": "172:44:0",
+            "scope": 50,
+            "src": "196:44:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -194,14 +206,14 @@
                 "id": 9,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
-                "src": "180:4:0",
+                "src": "204:4:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
               "nodeType": "Mapping",
-              "src": "172:26:0",
+              "src": "196:26:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_candidate_$8_storage_$",
                 "typeString": "mapping(uint256 => struct Elections.candidate)"
@@ -212,7 +224,7 @@
                 "name": "candidate",
                 "nodeType": "UserDefinedTypeName",
                 "referencedDeclaration": 8,
-                "src": "188:9:0",
+                "src": "212:9:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_struct$_candidate_$8_storage_ptr",
                   "typeString": "struct Elections.candidate"
@@ -223,50 +235,496 @@
             "visibility": "public"
           },
           {
+            "constant": false,
+            "id": 14,
+            "name": "candidateCounts",
+            "nodeType": "VariableDeclaration",
+            "scope": 50,
+            "src": "246:27:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 13,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "246:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
             "body": {
-              "id": 15,
+              "id": 29,
               "nodeType": "Block",
-              "src": "250:8:0",
-              "statements": []
+              "src": "306:108:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4e4157415a20536861726966",
+                        "id": 18,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "325:14:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_d86409a8fa9d468f6798307e77016f6b73a9aabb5771e93c66a27a3da2000d96",
+                          "typeString": "literal_string \"NAWAZ Sharif\""
+                        },
+                        "value": "NAWAZ Sharif"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_d86409a8fa9d468f6798307e77016f6b73a9aabb5771e93c66a27a3da2000d96",
+                          "typeString": "literal_string \"NAWAZ Sharif\""
+                        }
+                      ],
+                      "id": 17,
+                      "name": "addCandidate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 49,
+                      "src": "312:12:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory)"
+                      }
+                    },
+                    "id": 19,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "312:28:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 20,
+                  "nodeType": "ExpressionStatement",
+                  "src": "312:28:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "496d72616e204b68616e20",
+                        "id": 22,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "357:13:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_c06a1e124fecec4ba325571ac77820176b6ddd442c1a6152960fbca4f70de63d",
+                          "typeString": "literal_string \"Imran Khan \""
+                        },
+                        "value": "Imran Khan "
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_c06a1e124fecec4ba325571ac77820176b6ddd442c1a6152960fbca4f70de63d",
+                          "typeString": "literal_string \"Imran Khan \""
+                        }
+                      ],
+                      "id": 21,
+                      "name": "addCandidate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 49,
+                      "src": "344:12:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory)"
+                      }
+                    },
+                    "id": 23,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "344:27:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 24,
+                  "nodeType": "ExpressionStatement",
+                  "src": "344:27:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "5a61726461726920546865204b696e67",
+                        "id": 26,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "388:18:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_205798344d5857478876148467ebebf3fa95dd0653e827f84b356638878d261a",
+                          "typeString": "literal_string \"Zardari The King\""
+                        },
+                        "value": "Zardari The King"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_205798344d5857478876148467ebebf3fa95dd0653e827f84b356638878d261a",
+                          "typeString": "literal_string \"Zardari The King\""
+                        }
+                      ],
+                      "id": 25,
+                      "name": "addCandidate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 49,
+                      "src": "375:12:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory)"
+                      }
+                    },
+                    "id": 27,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "375:32:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 28,
+                  "nodeType": "ExpressionStatement",
+                  "src": "375:32:0"
+                }
+              ]
             },
             "documentation": null,
-            "id": 16,
+            "id": 30,
             "implemented": true,
-            "kind": "function",
+            "kind": "constructor",
             "modifiers": [],
-            "name": "Election",
+            "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 13,
+              "id": 15,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "238:2:0"
+              "src": "293:2:0"
             },
             "returnParameters": {
-              "id": 14,
+              "id": 16,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "250:0:0"
+              "src": "306:0:0"
             },
-            "scope": 17,
-            "src": "220:38:0",
+            "scope": 50,
+            "src": "282:132:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 48,
+              "nodeType": "Block",
+              "src": "493:105:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 36,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "498:17:0",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 35,
+                      "name": "candidateCounts",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14,
+                      "src": "498:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 37,
+                  "nodeType": "ExpressionStatement",
+                  "src": "498:17:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 46,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 38,
+                        "name": "candidates",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 12,
+                        "src": "522:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_candidate_$8_storage_$",
+                          "typeString": "mapping(uint256 => struct Elections.candidate storage ref)"
+                        }
+                      },
+                      "id": 40,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 39,
+                        "name": "candidateCounts",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14,
+                        "src": "533:15:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "522:27:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_candidate_$8_storage",
+                        "typeString": "struct Elections.candidate storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 42,
+                          "name": "candidateCounts",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 14,
+                          "src": "562:15:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 43,
+                          "name": "_name",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 32,
+                          "src": "580:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 44,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "586:1:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 41,
+                        "name": "candidate",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8,
+                        "src": "552:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_candidate_$8_storage_ptr_$",
+                          "typeString": "type(struct Elections.candidate storage pointer)"
+                        }
+                      },
+                      "id": 45,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "552:37:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_candidate_$8_memory",
+                        "typeString": "struct Elections.candidate memory"
+                      }
+                    },
+                    "src": "522:67:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_candidate_$8_storage",
+                      "typeString": "struct Elections.candidate storage ref"
+                    }
+                  },
+                  "id": 47,
+                  "nodeType": "ExpressionStatement",
+                  "src": "522:67:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 49,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addCandidate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 49,
+                  "src": "461:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 31,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "461:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "460:21:0"
+            },
+            "returnParameters": {
+              "id": 34,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "493:0:0"
+            },
+            "scope": 50,
+            "src": "438:160:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "private"
           }
         ],
-        "scope": 18,
-        "src": "68:199:0"
+        "scope": 51,
+        "src": "68:541:0"
       }
     ],
-    "src": "33:234:0"
+    "src": "33:576:0"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/contracts/Elections.sol",
       "exportedSymbols": {
         "Elections": [
-          17
+          50
         ]
       }
     },
@@ -299,17 +757,17 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            17
+            50
           ],
           "name": "Elections",
-          "scope": 18
+          "scope": 51
         },
         "children": [
           {
             "attributes": {
               "canonicalName": "Elections.candidate",
               "name": "candidate",
-              "scope": 17,
+              "scope": 50,
               "visibility": "public"
             },
             "children": [
@@ -342,32 +800,6 @@
               {
                 "attributes": {
                   "constant": false,
-                  "name": "votecount",
-                  "scope": 8,
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "type": "uint256",
-                  "value": null,
-                  "visibility": "internal"
-                },
-                "children": [
-                  {
-                    "attributes": {
-                      "name": "uint",
-                      "type": "uint256"
-                    },
-                    "id": 4,
-                    "name": "ElementaryTypeName",
-                    "src": "128:4:0"
-                  }
-                ],
-                "id": 5,
-                "name": "VariableDeclaration",
-                "src": "128:14:0"
-              },
-              {
-                "attributes": {
-                  "constant": false,
                   "name": "name",
                   "scope": 8,
                   "stateVariable": false,
@@ -382,25 +814,51 @@
                       "name": "string",
                       "type": "string"
                     },
+                    "id": 4,
+                    "name": "ElementaryTypeName",
+                    "src": "132:6:0"
+                  }
+                ],
+                "id": 5,
+                "name": "VariableDeclaration",
+                "src": "132:11:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "votecount",
+                  "scope": 8,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
                     "id": 6,
                     "name": "ElementaryTypeName",
-                    "src": "147:6:0"
+                    "src": "148:4:0"
                   }
                 ],
                 "id": 7,
                 "name": "VariableDeclaration",
-                "src": "147:12:0"
+                "src": "148:14:0"
               }
             ],
             "id": 8,
             "name": "StructDefinition",
-            "src": "92:72:0"
+            "src": "92:75:0"
           },
           {
             "attributes": {
               "constant": false,
               "name": "candidates",
-              "scope": 17,
+              "scope": 50,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(uint256 => struct Elections.candidate)",
@@ -420,7 +878,7 @@
                     },
                     "id": 9,
                     "name": "ElementaryTypeName",
-                    "src": "180:4:0"
+                    "src": "204:4:0"
                   },
                   {
                     "attributes": {
@@ -431,29 +889,55 @@
                     },
                     "id": 10,
                     "name": "UserDefinedTypeName",
-                    "src": "188:9:0"
+                    "src": "212:9:0"
                   }
                 ],
                 "id": 11,
                 "name": "Mapping",
-                "src": "172:26:0"
+                "src": "196:26:0"
               }
             ],
             "id": 12,
             "name": "VariableDeclaration",
-            "src": "172:44:0"
+            "src": "196:44:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "candidateCounts",
+              "scope": 50,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 13,
+                "name": "ElementaryTypeName",
+                "src": "246:4:0"
+              }
+            ],
+            "id": 14,
+            "name": "VariableDeclaration",
+            "src": "246:27:0"
           },
           {
             "attributes": {
               "documentation": null,
               "implemented": true,
-              "isConstructor": false,
-              "kind": "function",
+              "isConstructor": true,
+              "kind": "constructor",
               "modifiers": [
                 null
               ],
-              "name": "Election",
-              "scope": 17,
+              "name": "",
+              "scope": 50,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -466,9 +950,9 @@
                   ]
                 },
                 "children": [],
-                "id": 13,
+                "id": 15,
                 "name": "ParameterList",
-                "src": "238:2:0"
+                "src": "293:2:0"
               },
               {
                 "attributes": {
@@ -477,35 +961,488 @@
                   ]
                 },
                 "children": [],
-                "id": 14,
+                "id": 16,
                 "name": "ParameterList",
-                "src": "250:0:0"
+                "src": "306:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_stringliteral_d86409a8fa9d468f6798307e77016f6b73a9aabb5771e93c66a27a3da2000d96",
+                                  "typeString": "literal_string \"NAWAZ Sharif\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 49,
+                              "type": "function (string memory)",
+                              "value": "addCandidate"
+                            },
+                            "id": 17,
+                            "name": "Identifier",
+                            "src": "312:12:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "4e4157415a20536861726966",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"NAWAZ Sharif\"",
+                              "value": "NAWAZ Sharif"
+                            },
+                            "id": 18,
+                            "name": "Literal",
+                            "src": "325:14:0"
+                          }
+                        ],
+                        "id": 19,
+                        "name": "FunctionCall",
+                        "src": "312:28:0"
+                      }
+                    ],
+                    "id": 20,
+                    "name": "ExpressionStatement",
+                    "src": "312:28:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_stringliteral_c06a1e124fecec4ba325571ac77820176b6ddd442c1a6152960fbca4f70de63d",
+                                  "typeString": "literal_string \"Imran Khan \""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 49,
+                              "type": "function (string memory)",
+                              "value": "addCandidate"
+                            },
+                            "id": 21,
+                            "name": "Identifier",
+                            "src": "344:12:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "496d72616e204b68616e20",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Imran Khan \"",
+                              "value": "Imran Khan "
+                            },
+                            "id": 22,
+                            "name": "Literal",
+                            "src": "357:13:0"
+                          }
+                        ],
+                        "id": 23,
+                        "name": "FunctionCall",
+                        "src": "344:27:0"
+                      }
+                    ],
+                    "id": 24,
+                    "name": "ExpressionStatement",
+                    "src": "344:27:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_stringliteral_205798344d5857478876148467ebebf3fa95dd0653e827f84b356638878d261a",
+                                  "typeString": "literal_string \"Zardari The King\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 49,
+                              "type": "function (string memory)",
+                              "value": "addCandidate"
+                            },
+                            "id": 25,
+                            "name": "Identifier",
+                            "src": "375:12:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "5a61726461726920546865204b696e67",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Zardari The King\"",
+                              "value": "Zardari The King"
+                            },
+                            "id": 26,
+                            "name": "Literal",
+                            "src": "388:18:0"
+                          }
+                        ],
+                        "id": 27,
+                        "name": "FunctionCall",
+                        "src": "375:32:0"
+                      }
+                    ],
+                    "id": 28,
+                    "name": "ExpressionStatement",
+                    "src": "375:32:0"
+                  }
+                ],
+                "id": 29,
+                "name": "Block",
+                "src": "306:108:0"
+              }
+            ],
+            "id": 30,
+            "name": "FunctionDefinition",
+            "src": "282:132:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "addCandidate",
+              "scope": 50,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_name",
+                      "scope": 49,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 31,
+                        "name": "ElementaryTypeName",
+                        "src": "461:6:0"
+                      }
+                    ],
+                    "id": 32,
+                    "name": "VariableDeclaration",
+                    "src": "461:19:0"
+                  }
+                ],
+                "id": 33,
+                "name": "ParameterList",
+                "src": "460:21:0"
               },
               {
                 "attributes": {
-                  "statements": [
+                  "parameters": [
                     null
                   ]
                 },
                 "children": [],
-                "id": 15,
+                "id": 34,
+                "name": "ParameterList",
+                "src": "493:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "++",
+                          "prefix": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 14,
+                              "type": "uint256",
+                              "value": "candidateCounts"
+                            },
+                            "id": 35,
+                            "name": "Identifier",
+                            "src": "498:15:0"
+                          }
+                        ],
+                        "id": 36,
+                        "name": "UnaryOperation",
+                        "src": "498:17:0"
+                      }
+                    ],
+                    "id": 37,
+                    "name": "ExpressionStatement",
+                    "src": "498:17:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct Elections.candidate storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct Elections.candidate storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 12,
+                                  "type": "mapping(uint256 => struct Elections.candidate storage ref)",
+                                  "value": "candidates"
+                                },
+                                "id": 38,
+                                "name": "Identifier",
+                                "src": "522:10:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 14,
+                                  "type": "uint256",
+                                  "value": "candidateCounts"
+                                },
+                                "id": 39,
+                                "name": "Identifier",
+                                "src": "533:15:0"
+                              }
+                            ],
+                            "id": 40,
+                            "name": "IndexAccess",
+                            "src": "522:27:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "struct Elections.candidate memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_rational_0_by_1",
+                                      "typeString": "int_const 0"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 8,
+                                  "type": "type(struct Elections.candidate storage pointer)",
+                                  "value": "candidate"
+                                },
+                                "id": 41,
+                                "name": "Identifier",
+                                "src": "552:9:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 14,
+                                  "type": "uint256",
+                                  "value": "candidateCounts"
+                                },
+                                "id": 42,
+                                "name": "Identifier",
+                                "src": "562:15:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 32,
+                                  "type": "string memory",
+                                  "value": "_name"
+                                },
+                                "id": 43,
+                                "name": "Identifier",
+                                "src": "580:5:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "30",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 0",
+                                  "value": "0"
+                                },
+                                "id": 44,
+                                "name": "Literal",
+                                "src": "586:1:0"
+                              }
+                            ],
+                            "id": 45,
+                            "name": "FunctionCall",
+                            "src": "552:37:0"
+                          }
+                        ],
+                        "id": 46,
+                        "name": "Assignment",
+                        "src": "522:67:0"
+                      }
+                    ],
+                    "id": 47,
+                    "name": "ExpressionStatement",
+                    "src": "522:67:0"
+                  }
+                ],
+                "id": 48,
                 "name": "Block",
-                "src": "250:8:0"
+                "src": "493:105:0"
               }
             ],
-            "id": 16,
+            "id": 49,
             "name": "FunctionDefinition",
-            "src": "220:38:0"
+            "src": "438:160:0"
           }
         ],
-        "id": 17,
+        "id": 50,
         "name": "ContractDefinition",
-        "src": "68:199:0"
+        "src": "68:541:0"
       }
     ],
-    "id": 18,
+    "id": 51,
     "name": "SourceUnit",
-    "src": "33:234:0"
+    "src": "33:576:0"
   },
   "compiler": {
     "name": "solc",
@@ -515,12 +1452,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x4615362c9Bf3D534a286f7D2d0096d02Acb6e3Ce",
-      "transactionHash": "0x5052919ed53132a58acdd6f97b84df98185fcc64d3c1e3b25b1a195830927d9f"
+      "address": "0x6A8F6681A701D6d27f3628254491A7E2D6EEd175",
+      "transactionHash": "0xd0c75240ebdcf085cf3a35206c05b38b63b426313ff74b0f132b4fbb2ffc8b30"
     }
   },
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-06-10T18:56:16.445Z",
+  "updatedAt": "2022-06-10T21:18:38.698Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },

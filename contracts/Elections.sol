@@ -6,27 +6,37 @@ contract Elections
 	struct candidate
 	{
 		uint id;
-		uint votecount;
+		
 		string name;
+		uint votecount;
 	}
 	
 	////Fetch Candidates
 	mapping(uint => candidate) public candidates;
 
 	uint public candidateCounts;
-	function Election () public
-	{
+
 	
+	constructor() public 
+	{
+
+	addCandidate("NAWAZ Sharif");
+	addCandidate("Imran Khan ");
+	addCandidate("Zardari The King");
+
 	}
 
 
+    
+	
+
 	
 	
-	function addCandidate (string calldata _name) public
+	function addCandidate (string memory _name) private 
 	{
 		candidateCounts++;
 
-		candidates[candidateCounts] = candidate(candidateCounts, 0 , _name );
+		candidates[candidateCounts] = candidate(candidateCounts,  _name,0 );
 
 
 	}
